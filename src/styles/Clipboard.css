@@ -1,0 +1,17 @@
+.clipboard-icon {
+  cursor: pointer;
+  font-size: 16px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.clipboard-icon:hover {
+  color: #000;
+  transform: scale(1.05);
+}
+
+.clipboard-icon.copied {
+  color: #2e7d32; /* success green */
+}
