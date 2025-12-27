@@ -1,0 +1,81 @@
+/* Full-screen background */
+.lock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full viewport height */
+  background: linear-gradient(135deg, #4a90e2, #357ab8);
+  font-family: Arial, sans-serif;
+}
+
+/* Middle card container */
+.lock-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  width: 350px;
+  text-align: center;
+}
+
+/* Heading with icon */
+.lock-card h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin-bottom: 25px;
+}
+
+/* Icon spacing */
+.lock-card h2 svg {
+  margin-right: 10px;
+  font-size: 2rem;
+  color: #357ab8;
+}
+
+/* Form container */
+.lock-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input fields */
+.lock-form input {
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+  outline: none;
+  font-weight: bold;
+  transition: border-color 0.2s ease;
+}
+
+.lock-form input:focus {
+  border-color: #4a90e2;
+}
+
+/* Unlock button */
+.lock-form button {
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lock-form button:hover {
+  background-color: #357ab8;
+}
+
+/* Error message */
+.error-text {
+  color: #e53e3e;
+  font-size: 14px;
+}

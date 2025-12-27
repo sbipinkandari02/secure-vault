@@ -1,0 +1,100 @@
+/* Vault page background */
+.vault-page {
+  min-height: 100vh;
+  padding: 20px; /* smaller padding */
+  background: linear-gradient(135deg, #f8fafc, #edf2f7);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* ensure padding works */
+}
+
+/* Card for vault content */
+.vault-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  width: 100%;       /* full width of container */
+  max-width: 850px;  /* limit max width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Vault header */
+.vault-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.vault-header h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #1a202c;
+  font-weight: 700;
+}
+
+.vault-icon {
+  font-size: 2.2rem;
+  color: #4a90e2;
+}
+
+/* Button container aligned left */
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+/* Table styling */
+.secrets-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+}
+
+.secrets-table th {
+  background-color: #e2e8f0;
+  font-weight: 600;
+  padding: 10px;
+  text-align: left;
+  border-radius: 8px;
+}
+
+.secrets-table td {
+  background-color: #f7fafc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Eye icon alignment */
+.secrets-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start; /* aligns button to the left */
+  margin-bottom: 15px; /* spacing between button and table */
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .vault-card {
+    padding: 20px 15px;
+  }
+
+  .vault-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .vault-icon {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,73 @@
+/* Table container */
+.secrets-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Header cells */
+.secrets-table th {
+  background-color: #edf2f7;
+  color: #2d3748;
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  text-align: left;
+}
+
+/* Body cells */
+.secrets-table td {
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  vertical-align: middle;
+}
+
+/* Row striping */
+.secrets-table tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+/* Hover effect on rows */
+.secrets-table tbody tr:hover {
+  background-color: #ebf2f8;
+}
+
+/* Delete button */
+.delete-button {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #c53030;
+}
+
+/* Actions container */
+.secrets-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Eye icon */
+.eye-icon {
+  cursor: pointer;
+  font-size: 18px;
+  color: #4a90e2;
+  transition: color 0.2s ease;
+}
+
+.eye-icon:hover {
+  color: #357ab8;
+}
+
+/* Masked text style */
+.masked-text {
+  letter-spacing: 3px; /* for better readability of dots */
+}
