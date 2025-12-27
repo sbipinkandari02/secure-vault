@@ -1,8 +1,8 @@
-import { useMemo, useState } from "react";
-import { memo } from "react";
+import { useMemo, useState, memo } from "react";
 import { useTable } from "react-table";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import "../styles/Table.css";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import CustomClipboard from "../components/CustomClipboard";
 
 export default memo(function CustomTable({ secrets = [], onDelete }) {
   const [revealedRows, setRevealedRows] = useState({});
@@ -22,20 +22,36 @@ export default memo(function CustomTable({ secrets = [], onDelete }) {
       {
         Header: "Username",
         accessor: "username",
-        Cell: ({ row, value }) => (
-          <span className={revealedRows[row.index] ? "" : "masked-text"}>
-            {revealedRows[row.index] ? value : "••••••"}
-          </span>
-        ),
+        Cell: ({ row, value }) => {
+          const isVisible = revealedRows[row.index];
+
+          return (
+            <div className="cell-with-action">
+              <span className={isVisible ? "" : "masked-text"}>
+                {isVisible ? value : "••••••"}
+              </span>
+
+              {isVisible && <CustomClipboard value={value} />}
+            </div>
+          );
+        },
       },
       {
         Header: "Password",
         accessor: "password",
-        Cell: ({ row, value }) => (
-          <span className={revealedRows[row.index] ? "" : "masked-text"}>
-            {revealedRows[row.index] ? value : "••••••"}
-          </span>
-        ),
+        Cell: ({ row, value }) => {
+          const isVisible = revealedRows[row.index];
+
+          return (
+            <div className="cell-with-action">
+              <span className={isVisible ? "" : "masked-text"}>
+                {isVisible ? value : "••••••"}
+              </span>
+
+              {isVisible && <CustomClipboard value={value} />}
+            </div>
+          );
+        },
       },
       {
         Header: "Notes",

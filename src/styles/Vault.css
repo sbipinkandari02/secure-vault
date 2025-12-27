@@ -84,6 +84,32 @@
   margin-bottom: 15px; /* spacing between button and table */
 }
 
+.vault-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 10px;
+}
+
+/* Search input on left with smaller width */
+.search-input {
+  padding: 6px 10px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 200px; /* smaller input */
+}
+
+/* Create button on extreme right */
+.vault-controls button {
+  margin-left: auto; /* push to right */
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
 /* Responsive for small screens */
 @media (max-width: 600px) {
   .vault-card {
